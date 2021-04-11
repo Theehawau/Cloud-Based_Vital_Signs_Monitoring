@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		TEMP & PULSE RATE
+		<button id="increment">increment</button>
+		<form id="form" action="/data" method="get">
+			<input type="text" name="input" id="input" />
+			<!-- <input type="submit" value="Submit" /> -->
+			<button type="submit">Submit</button>
+		</form>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./js/temp.js"></script>
+	</body>
+</html>
