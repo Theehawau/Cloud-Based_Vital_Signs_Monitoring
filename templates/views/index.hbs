@@ -1,0 +1,119 @@
+{{>header}}
+
+
+{{>message}}
+<section class="home">
+    <div class="base-container">
+        <div class="header-details-container columns">
+            <div class="header">
+                <h5>DDTHMS</h5>
+            </div>
+
+            <div class="description">
+                <p>The pulse rate is a measurement of the number of times the heart beats per minute. Heart rate is the
+                    most important clinical indicator to evaluate the clinical status of a new born.
+                    The body temperature is the degree of heat maintained by the body.
+                    The body temperature and pulse rate show a general overview of a person’s health condition.
+                    The normal core human body temperature range is 36.50C – 37.50C.
+                    The normal pulse rate range for infants (<28 days - 1 year) is 70 - 160 bpm. </p>
+            </div>
+        </div>
+        <div class="form-container columns">
+            <div>
+                <h5>Log In</h5>
+            </div>
+            <hr>
+            <form action="/users/login" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                    <input type="email" class="form-control" required name="email">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                    <input type="password" class="form-control" required name="password">
+                </div>
+                <p>No account? <a href="/users/signIn">Sign In</a></p>
+
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+
+<section class="about">
+    <div class="base-container">
+        <div class="header-details-container columns">
+            <div class="header">
+                <h5>About</h5>
+            </div>
+            <div class="description">
+                <p>This App is used for real time vital signs data monitoring.</p>
+            </div>
+        </div>
+
+        <div class="img-container columns">
+            <img src="/images/about_image.jpg" alt="Alternative Image slides">
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+
+<section class="contacts">
+    <div class="header-details-container">
+        <div class="header">
+            <h5>Contacts</h5>
+        </div>
+        <div id="contacts-container">
+            <div class="contacts-table columns">
+                <table class="table table-striped table-sm">
+                    <thead>Toyin Hawau Olamide</thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email Address</th>
+                            <td>hawau.olamide.th@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone number</th>
+                            <td>08176770833</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Github</th>
+                            <td>theehawau.github.io</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contacts-table columns">
+                <table class="table table-striped table-sm">
+                    <thead>Ibrahim</thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email Address</th>
+                            <td>ibrahim@example.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone number</th>
+                            <td>07032528460</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Github</th>
+                            <td>xXX</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+{{>footer}}

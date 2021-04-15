@@ -1,0 +1,19 @@
+{{>header}}
+<h2>Devices</h2>
+{{>message}}
+<div class="list-group">
+    {{#each devices}}
+    <a href="/users/{{device}}/data" class="list-group-item list-group-item-action">{{device}}</a>
+    <br>
+    {{/each}}
+</div>
+
+<a class="btn btn-primary" href="/users/addDevice" role="button">Add Device</a>
+<br>
+<div class="d-flex">
+    <form action="/users/logout" method="POST">
+        <button type="submit" class="btn btn-danger">Sign Out</button>
+    </form>
+
+</div>
+{{>footer}}

@@ -1,0 +1,14 @@
+{{>header}}
+<form action="/users/addDevice?_method=PATCH" method="POST">
+    <div class="form-group">
+        <label for="exampleInputName">Device Name</label>
+        <input name="deviceName" type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+            placeholder="Enter Device Name">
+    </div>
+    <div class="form-group">
+        <br>
+        <button type="submit" class="btn btn-primary">Add Device</button>
+    </div>
+
+</form>
+{{>footer}}

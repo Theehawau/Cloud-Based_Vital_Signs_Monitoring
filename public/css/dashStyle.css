@@ -1,0 +1,55 @@
+body{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	background-color: #e3e3e3
+}
+
+header{
+	margin: auto;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+hr{
+	border-top: 3px solid white;
+	width: 90%;
+}
+
+.base-container{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px
+}
+
+.chart{
+	width: 70%;
+	height: 80%;
+	margin-right: 16px;
+}
+
+.pulse-row{
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .base-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+	.columns{
+	width: 100%;
+	}
+	.chart{
+	width: 50%;
+	height: 50%;
+	margin-bottom: 16px;
+	}
+
+	.container-fluid{
+		display: flex;
+	}
+}
+

@@ -1,0 +1,49 @@
+{{>header}}
+<p>Data for: {{deviceId}}</p>
+{{>message}}
+
+<p style="display: none;" id="deviceId"> {{deviceId}}</p>
+<section class="temperature">
+    <div class="base-container" style="max-width: 60%;">
+
+        <canvas id="pulseChart" height="30%" width="40%">
+
+        </canvas>
+        <div class="table columns">
+            <table class="table ">
+                <tr class="pulse-row">
+                    <th scope="row">Pulse Rate</th>
+                    <td>{{cPulse}} bpm</td>
+                </tr>
+                <thead>
+                    <h5><b>Vital Signs</b></h5>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Current Temperature</th>
+                        <td>{{cTemp}} °C</td>
+                    </tr>
+                    {{!-- <tr>
+                        <th scope="row">Average Temperature(24hrs)</th>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Average Temperature(7days)</th>
+                        <td>0.00</td>
+                    </tr> --}}
+                    <br>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<div class="d-flex">
+    <form action="/users/logout" method="POST">
+        <button type="submit" class="btn btn-danger">Sign Out</button>
+    </form>
+
+</div>
+{{>footer}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+<script src="/js/chart.js"></script>

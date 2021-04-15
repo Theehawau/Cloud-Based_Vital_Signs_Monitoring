@@ -12,7 +12,6 @@ router.post("/newdevice", async (req, res) => {
 		res.status(404).send(err);
 	}
 });
-
 // Set user details
 router.patch("/:deviceId/patientDetail", async (req,res) => {
 	const updates = Object.keys(req.body)
@@ -21,13 +20,10 @@ router.patch("/:deviceId/patientDetail", async (req,res) => {
 		if (!device) return res.status(404).send()
 		updates.forEach(update => device[update] = req.body[update])
         await device.save()
-        res.send(device)
+        res.status(200).send('Device Updated')
 	} catch (error) {
 		res.status(500).send(error);
 	}
 })
-router.get("/data", (req, res) => {
-	res.send("Route Active!");
-});
 
 module.exports = router;
