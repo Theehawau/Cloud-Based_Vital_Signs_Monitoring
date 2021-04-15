@@ -47,7 +47,7 @@ router.patch("/users/addDevice", auth, async (req, res) => {
 		await req.user.save()
 		res.status(201).render('home',{devices:req.user.devices})
 	} catch (error) {
-		res.status(500).send();
+		res.status(500).send(error);
 	}
 });
 // Sign In
