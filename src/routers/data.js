@@ -11,18 +11,18 @@ router.post('/:deviceId/data', async (req, res) => {
 	try {
 		const device = await Device.findOne({deviceId:req.params.deviceId})
 		const data = new Data({
-			...req.query,
+			...req.body,
 			device: device._id,
 			gender:device.patientGender,
 			age:device.patientAge
 		});
 		await data.save();
-		if (req.query.fatal == 'true'){	
+		if (req.body.fatal == 'true'){	
 			const users = await TelegramUser.find({}, 'chatId').exec();
 			// let chatIds = []
 			const message = `Fatal Vital Signs for patient on ${req.params.deviceId}.See patient Now!!! 
 				Vital Signs:
-				Temperature:${req.query.temperature}°C, Pulse rate:${req.query.pulse}bpm`
+				Temperature:${req.body.temperature}°C, Pulse rate:${req.body.pulse}bpm`
 			users.forEach(user => {
 				// chatIds.push(user.chatId)
 				sendErrorMessage(user.chatId,message)
