@@ -17,6 +17,7 @@ router.post('/:deviceId/data', async (req, res) => {
 			age:device.patientAge
 		});
 		await data.save();
+		console.log(data);
 		if (req.body.fatal == 'true'){	
 			const users = await TelegramUser.find({}, 'chatId').exec();
 			// let chatIds = []
@@ -45,16 +46,17 @@ router.get('/:deviceId/data', async (req, res) =>{
 			path:'data',
 			options: {
 				sort: {createdAt: -1},
-				limit:10
+				limit:1
 			}
 		}).execPopulate()
-		let pulse = [];
-		let time = [];
-		device.data.forEach(data => {
-			pulse.push(data.pulse);
-			time.push(data.createdAt);
-		});
-		res.status(200).send({pulse,time})
+		// let pulse = [];
+		// let time = [];
+		// device.data.forEach(data => {
+		// 	pulse.push(data.pulse);
+		// 	time.push(data.createdAt);
+		// });
+	
+		res.status(200).send(device.data[0])
 	} catch (error) {
 		res.status(500).send(error);
 	}

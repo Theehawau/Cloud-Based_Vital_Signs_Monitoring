@@ -1,8 +1,23 @@
 
 const ctx = document.getElementById('pulseChart');
 const deviceId = document.getElementById('deviceId').innerHTML
+const temp = document.getElementById('temperature')
+const pulse = document.getElementById('pulse')
 const link = `http://localhost:3000/${deviceId.trim()}/data` 
 
+
+setInterval(() => {
+  fetch(link, {
+    method: 'GET'
+  }).then(res => {
+    const deviceData = res.json()
+    return deviceData
+  }).then((deviceData) => {
+    temp.innerHTML=deviceData.temperature + "°C"
+    pulse.innerHTML = deviceData.pulse + "bpm"
+  })
+  
+}, 100);
 
   fetch(link, {
     method: 'GET'
