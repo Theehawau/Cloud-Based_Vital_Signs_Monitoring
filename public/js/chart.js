@@ -3,7 +3,7 @@ const ctx = document.getElementById('pulseChart');
 const deviceId = document.getElementById('deviceId').innerHTML
 const temp = document.getElementById('temperature')
 const pulse = document.getElementById('pulse')
-const link = `http://localhost:3000/${deviceId.trim()}/data` 
+const link = `https://vital-signs-project.herokuapp.com/${deviceId.trim()}/data` 
 
 
 setInterval(() => {
