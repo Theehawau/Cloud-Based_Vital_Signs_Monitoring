@@ -17,7 +17,7 @@ setInterval(() => {
     pulse.innerHTML = deviceData.pulse + "bpm"
   })
   
-}, 100);
+}, 50);
 
   fetch(link, {
     method: 'GET'
