@@ -11,8 +11,11 @@ const app = express();
 
 
 const deviceRouter = require("./routers/device");
+const devicesRouter = require("./routers/devices");
 const dataRouter = require("./routers/data");
+const wardRouter = require("./routers/ward");
 const userRouter = require('./routers/user')
+const wearableRouter = require('./routers/wearable')
 
 // Setting Up hbs engine
 const publicDir = path.join(__dirname, '../public')
@@ -39,8 +42,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Using routers
 app.use(deviceRouter);
+app.use(devicesRouter);
 app.use(dataRouter);
+app.use(wardRouter);
 app.use(userRouter);
+app.use(wearableRouter);
 
 app.get('/', (req,res) => {
     res.render('index', {layout: 'layouts/main'
