@@ -76,7 +76,7 @@ router.post("/wearable/users/login", async (req, res) => {
 	}
 });
 // Log Out
-router.post("/wearable/users/logout", auth, async (req, res) => {
+router.post("/wearable/users/logout", async (req, res) => {
 	try {
 		req.user.tokens = req.user.tokens.filter((token) => {
 			return token.token != req.token;
