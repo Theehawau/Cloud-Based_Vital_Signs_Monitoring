@@ -45,3 +45,9 @@ button {
 	color: white;
 	padding: 8px;
 }
+
+@media only screen and (max-width: 768px) {
+	body {
+		min-width: 95%;
+	}
+}
