@@ -1,13 +1,27 @@
-<table>
+<h3 id="ward">Hospital Ward Monitoring System</h3>
+<table class="ward">
     <thead>
-        <tr>Temperature</tr>
-        <tr>Humidity</tr>
-        <tr>Lux</tr>
-        <tr>Air Quality</tr>
-        <tr>Flame</tr>
-        <tr>Noise</tr>
+        <td>Temperature</td>
+        <td>Humidity </td>
+        <td>Fire</td>
+        <td>Noise</td>
+        <td>Time Stamp</td>
     </thead>
-    <tbody>
-
-    </tbody>
+    {{#each data}}
+    <tr>
+        <td>{{Temperature}}°C</td>
+        <td>{{Humidity}} %</td>
+        <td>{{Fire}}</td>
+        <td>{{Noise}}</td>
+        <td>{{createdAt}}</td>
+    </tr>
+    {{/each}}
 </table>
+<div class="d-flex">
+    <form action="/ward/users/logout" method="POST">
+        <button type="submit" class="btn btn-danger">Sign Out</button>
+    </form>
+
+</div>
+
+{{>footer}}

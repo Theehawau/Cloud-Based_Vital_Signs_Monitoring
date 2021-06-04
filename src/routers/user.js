@@ -92,4 +92,9 @@ router.post("/users/logout", auth, async (req, res) => {
 router.get('/users/*' , (req,res) => {
 	res.render('index', {layout:'layouts/main'})
 })
+router.get('/wearable/:deviceId', (req,res) => {
+	res.render('wearable', {
+		deviceId:req.params.deviceId,layout:'layouts/main'})
+})
+
 module.exports = router;

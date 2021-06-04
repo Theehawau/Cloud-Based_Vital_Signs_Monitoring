@@ -49,12 +49,6 @@ router.get('/:deviceId/data', async (req, res) =>{
 				limit:1
 			}
 		}).execPopulate()
-		// let pulse = [];
-		// let time = [];
-		// device.data.forEach(data => {
-		// 	pulse.push(data.pulse);
-		// 	time.push(data.createdAt);
-		// });
 	
 		res.status(200).send(device.data[0])
 	} catch (error) {

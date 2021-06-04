@@ -11,20 +11,13 @@ const wardDataSchema= new mongoose.Schema(
 		Humidity:{
 			type: Number
 		},
-		Lux:{
-			type: Number
-		},
-		AirQuality:{
+		Fire:{
 			type:String,
-			default: 'Ok'
-		},
-		Flame:{
-			type:String,
-			default: 'Ok'
+			default: 'No'
 		},
 		Noise:{
 			type:String,
-			default: 'Ok'
+			default: 'Low'
 		},
 		device:{
 			type:String

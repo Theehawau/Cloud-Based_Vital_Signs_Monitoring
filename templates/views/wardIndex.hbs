@@ -1,0 +1,109 @@
+<h3 id="ward">Hospital Ward Monitoring System</h3>
+
+{{>message}}
+<section class="home">
+    <div class="base-container">
+        <div class="header-details-container columns">
+            <div class="header">
+                <h5>Device Description</h5>
+            </div>
+
+            <div class="description">
+                <p>This device does continous measurement and display of temprature, relative humidity, niose level and as well, detects fire.
+                     </p>
+            </div>
+        </div>
+        <div class="form-container columns">
+            <div>
+                <h5>Log In</h5>
+            </div>
+            <hr>
+            <form action="/ward/users/login" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                    <input type="email" class="form-control" required name="email">
+                </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                    <input type="password" class="form-control" required name="password">
+                </div>
+                <p>No account? <a href="ward/users/signIn">Sign In</a></p>
+
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+
+<section class="about">
+    <div class="base-container">
+        <div class="header-details-container columns">
+            <div class="header">
+                <h5>About</h5>
+            </div>
+            <div class="description">
+                <p>This App is used for monitoring the environmental condition for hospital wards.</p>
+            </div>
+        </div>
+
+        <div class="img-container columns">
+            <img src="/images/about_image.jpg" alt="Alternative Image slides">
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+
+<section class="contacts">
+    <div class="header-details-container">
+        <div class="header">
+            <h5>Contacts</h5>
+        </div>
+        <div id="contacts-container">
+            <div class="contacts-table columns">
+                <table class="table table-striped table-sm">
+                    <thead>Oguntoye Adebola Christianah </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email Address</th>
+                            <td>oguntoyeadebola21@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone number</th>
+                            <td>08106694443</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="contacts-table columns">
+                <table class="table table-striped table-sm">
+                    <thead>Balogun Olluwaseun</thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Email Address</th>
+                            <td>ibrahim@example.com</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone number</th>
+                            <td>07032528460</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <hr class="solid">
+</section>
+{{>footer}}
