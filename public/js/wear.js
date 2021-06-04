@@ -11,8 +11,8 @@ setInterval(() => {
     const deviceData = res.json()
     return deviceData
   }).then((deviceData) => {
-    temp.innerHTML=deviceData.temperature + "°C"
-    pulse.innerHTML = deviceData.pulse + "bpm"
+    temp.innerHTML=deviceData.temperature
+    pulse.innerHTML = deviceData.pulse 
   })
   
 }, 50);
