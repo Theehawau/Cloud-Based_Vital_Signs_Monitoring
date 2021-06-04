@@ -45,7 +45,11 @@ button {
 	color: white;
 	padding: 8px;
 }
-
+#temperature,
+#pulse {
+	font-family: "Lato", sans-serif;
+	font-size: 124px;
+}
 @media only screen and (max-width: 768px) {
 	body {
 		min-width: 95%;
