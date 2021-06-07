@@ -1,6 +1,6 @@
 const deviceId = document.getElementById('deviceId').innerHTML
 const temp = document.getElementById('temperature')
-const pulse = document.getElementById('pulse')
+// const pulse = document.getElementById('pulse')
 const link = `https://vital-signs-project.herokuapp.com/wearable/${deviceId.trim()}/data` 
 // const link = `localhost:3000/wearable/${deviceId.trim()}/data`
 
@@ -12,7 +12,7 @@ setInterval(() => {
     return deviceData
   }).then((deviceData) => {
     temp.innerHTML=deviceData.temperature
-    pulse.innerHTML = deviceData.pulse 
+    // pulse.innerHTML = deviceData.pulse 
   })
   
-}, 50);
+}, 5000);
