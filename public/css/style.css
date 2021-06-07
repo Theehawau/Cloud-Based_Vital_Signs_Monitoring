@@ -49,6 +49,7 @@ button {
 #pulse {
 	font-family: "Lato", sans-serif;
 	font-size: 124px;
+	color: black;
 }
 @media only screen and (max-width: 768px) {
 	body {
